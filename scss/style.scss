@@ -33,22 +33,55 @@
     font-size: 2rem;
     cursor: pointer;
 	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    
+    &:hover {
+        background: #8b8383;
+	    box-shadow: 0px 4px #4f4c5d;
+	    color: white;
+    }
 }
 
-.keys__one--result{
+.keys__one__result{
+    overflow: hidden;
+    margin: 0 10px 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     flex: 3;
     padding: 0 10px;
     background: rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
 	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.5);
     color: white;
-    text-align: right;
+    font-size: 3rem;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	letter-spacing: 1px;
 }
 
-.keys__one--reset {
-    background: red;
+.keys__one__reset {
+    @extend .keys__one;
+    background: rgba(255,0,0,0.6);
     border-radius: 10px;
     color: white;
     font-weight: 600;
     font-size: 3.5rem;
+    
+    &:hover {
+        background: red;
+	    box-shadow: 0px 4px rgb(190,0,0);
+	    color: #ffffff;
+    }
+}
+
+.keys__one__sum {
+    @extend .keys__one;
+    background: #f1ff92;
+	box-shadow: 0px 4px #9da853;
+	color:rgba(0, 0, 0, 0.7);
+    
+     &:hover {
+        background: #abb850;
+	    box-shadow: 0px 4px #717a33;
+	    color: #ffffff;
+    }
 }
