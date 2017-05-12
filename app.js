@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             if (newVal == '=') {
-                console.log('gusia');
                 var equation = inputVal;
-                equation = equation.replace(/&#215/g, '*').replace(/&#247/g, '/');
-
+                	equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+                console.log(equation);
                 if (equation) {
                     input.innerHTML = eval(equation);
                 }
