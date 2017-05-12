@@ -12,6 +12,7 @@
     background: linear-gradient(#9dd2ea, #8bceec);
     box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
     padding: 20px 20px 9px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .keys {
@@ -25,13 +26,29 @@
     justify-content: center;
     align-items: center;
     width: 90px;
-    height: 40px;
+    height: 70px;
     background: white;
     border-radius: 3px;
     margin: 0 10px 10px 0;
+    font-size: 2rem;
+    cursor: pointer;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
 }
 
 .keys__one--result{
-    background-color: darkslategrey;
-    flex: 3.3;
+    flex: 3;
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: right;
+}
+
+.keys__one--reset {
+    background: red;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 3.5rem;
 }
