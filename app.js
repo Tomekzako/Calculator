@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (newVal == '=') {
                 var equation = inputVal;
-                	equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+                equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
                 console.log(equation);
                 if (equation) {
                     input.innerHTML = eval(equation);
