@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     const keys = document.querySelectorAll('.keys__one');
+    const operators = ['+', '-', 'x', '÷'];
+    
 
     for (var i = 0; i < keys.length; i++) {
         keys[i].addEventListener('click', function () {
@@ -12,14 +14,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.innerHTML = '';
             }
 
-            if (newVal == '=') {
+            else if (newVal == '=') {
                 var equation = inputVal;
                 equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
                 console.log(equation);
                 if (equation) {
                     input.innerHTML = eval(equation);
                 }
-            } else {
+                
+                
+            }
+            
+            else if(operators.indexOf(newVal) > -1){
+                if(inputVal != ''){
+                    input.innerHTML += newVal;
+                }
+            }
+            
+            else {
                 input.innerHTML += newVal;
             }
         });
