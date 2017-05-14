@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (newVal == 'C') {
                 input.innerHTML = '';
-            
+
             } else if (newVal == '=') {
                 var equation = inputVal;
                 equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let lastEl = inputVal[inputVal.length - 1];
 
                 if (inputVal != '' && operators.indexOf(lastEl) == -1) {
+                    input.innerHTML += newVal;
+                } else if (inputVal == '' && newVal == '-') {
                     input.innerHTML += newVal;
                 }
             } else {
