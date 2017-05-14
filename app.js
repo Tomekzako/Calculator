@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (inputVal == '' && newVal == '-') {
                     input.innerHTML += newVal;
                 }
+
+                if (operators.indexOf(lastEl) > -1 && inputVal.length > 1) {
+                    input.innerHTML = inputVal.replace(/.$/, newVal);
+                }
             } else {
                 input.innerHTML += newVal;
             }
