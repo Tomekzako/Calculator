@@ -74,14 +74,18 @@ html {
     justify-content: flex-end;
     align-items: center;
     flex: 3;
-    padding: 0 10px;
+    padding: 0 5px;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     box-shadow: inset 0px 4px rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 3rem;
+    font-size: 0.75rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
+    @media(min-width: 800px){
+        font-size: 2rem;
+        padding: 0 10px;
+    }
 }
 
 .keys__one__reset {
