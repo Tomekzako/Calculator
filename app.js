@@ -14,9 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.innerHTML = '';
 
             } else if (newVal == '=') {
-                var equation = inputVal;
+                let equation = inputVal;
+                let lastEl = equation[equation.length-1];
                 equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
                 console.log(equation);
+                
+                if(operators.indexOf(lastEl) > -1 || lastEl == '.'){
+                    equation = equation.replace(/.$/,'');
+                }
+                
                 if (equation) {
                     input.innerHTML = eval(equation);
                 }
